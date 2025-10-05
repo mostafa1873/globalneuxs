@@ -1,0 +1,225 @@
+:root {
+    /* الألوان المستخدمة */
+    --maximum-yellow-red_a10: hsla(41, 99%, 64%, 0.1);
+    --maximum-yellow-red: hsl(41, 99%, 64%);
+    --orange-red_a20: hsla(19, 100%, 55%, 0.2);
+    --eerie-black: hsl(210, 11%, 15%);
+    --orange-red: hsl(19, 100%, 55%);
+    --davys-gray: hsl(0, 0%, 33%);
+    --jet: hsl(0, 0%, 22%);
+    --white: hsl(0, 0%, 100%);
+    /* الخطوط والأحجام */
+    --ff-jost: 'Jost', sans-serif;
+    --fs-26: 2.6rem;
+    --fs-18: 1.8rem;
+    --fs-14: 1.4rem;
+    --fs-12: 1.2rem;
+    /* الأوزان */
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    /* إعدادات أخرى */
+    --section-padding: 60px;
+    --shadow: 0 2px 2px hsla(0, 0%, 22%, 0.08);
+    --radius-pill: 100px;
+    --transition-1: 0.25s ease;
+}
+
+/* Reset */
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a,
+button,
+img,
+ion-icon,
+label,
+span {
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+button {
+    background: 0 0;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+html {
+    font-family: var(--ff-jost);
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--davys-gray);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+/* Utility */
+.btn {
+    background-color: #0c4a83;
+    font-size: var(--fs-14);
+    font-weight: var(--fw-500);
+    text-transform: uppercase;
+    max-width: max-content;
+    letter-spacing: 2px;
+    padding: 10px 22px;
+    box-shadow: 6px 6px 0 -1px;
+    transition: var(--transition-1);
+    color: #fff;
+    border: #fff;
+}
+
+.btn:is(:hover, :focus-visible) {
+    background-color: #1e6475;
+    box-shadow: 5px 5px 0 -2px #0c4a83;
+}
+
+.title-md {
+    font-size: var(--fs-26);
+    color: var(--jet);
+    font-weight: var(--fw-600);
+    line-height: 1.2;
+}
+
+.container {
+    padding-inline: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+    padding-block: var(--section-padding);
+}
+
+.section-title {
+    margin-block-end: 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+/* --- Portfolio --- */
+.portfolio {
+    background-color: #fafafa;
+    padding-block-start: calc(var(--section-padding) + 60px);
+}
+
+.portfolio-list {
+    display: grid;
+    gap: 40px;
+}
+
+.portfolio-card {
+    display: grid;
+    gap: 20px;
+}
+
+.portfolio-card .card-banner {
+    position: relative;
+    border: 2px solid var(--jet);
+    box-shadow: 0 0 0 var(--jet);
+    transition: var(--transition-1);
+}
+
+.portfolio-card .card-banner:is(:hover, :focus-within) {
+    box-shadow: 3px 3px 0 var(--jet);
+}
+
+.portfolio-card .btn-icon {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    background-color: var(--white);
+    color: var(--jet);
+    font-size: 2rem;
+    padding: 8px;
+    border: 2px solid var(--jet);
+    opacity: 0;
+    transition: var(--transition-1);
+    will-change: transform;
+}
+
+.portfolio-card .card-banner:is(:hover, :focus-within) .btn-icon {
+    transform: translateX(15px);
+    opacity: 1;
+}
+
+.portfolio-card .chip {
+    background-color: #0c4a83;
+    max-width: max-content;
+    color: #fff;
+    font-weight: var(--fw-500);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 6px 20px;
+    border-radius: var(--radius-pill);
+    margin-block-end: 15px;
+}
+
+.portfolio-card .card-text {
+    margin-block: 10px 20px;
+}
+
+/* --- Media Queries --- */
+/* موبايل: النصوص و chip والزرار في النص */
+@media (max-width: 767px) {
+    .portfolio-card {
+        text-align: center;
+    }
+
+    .portfolio-card .chip,
+    .portfolio-card .btn {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .portfolio-card {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .portfolio-list>li:nth-child(2n) .card-banner {
+        order: 1;
+    }
+}
+
+@media (min-width: 1200px) {
+    .portfolio-list {
+        gap: 60px;
+    }
+
+    .portfolio-card {
+        gap: 60px;
+    }
+
+    .portfolio-card .card-text {
+        font-size: var(--fs-18);
+        line-height: 1.6;
+    }
+}
