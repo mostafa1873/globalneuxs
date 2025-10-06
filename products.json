@@ -1,0 +1,71 @@
+[
+    {
+        "id" : 1,
+        "name" : "ِArtichoke",
+        "image" : "../img/products/product1.gif",
+        "description" : "fresh to your table! Naturally grown produce, picked at peak ripeness for the best quality and flavour."
+    },
+
+    {
+        "id" : 2,
+        "name" : "ِArtichoke",
+        "image" : "../img/products/product2.gif",
+        "description" : "Farm-fresh to your table! Naturally grown produce, picked at peak ripeness for the best quality and flavour."
+    },
+
+    {
+        "id" : 3,
+        "name" : "ِArtichoke",
+        "image" : "../img/products/product3.gif",
+        "description" : "Farm-fresh to your table! Naturally grown produce, picked at peak ripeness for the best quality and flavour."
+    },
+
+    {
+        "id" : 4,
+         "name" : "ِArtichoke",
+        "image" : "../img/products/product4.gif",
+        "description" : "Farm-fresh to your table! Naturally grown produce, picked at peak ripeness for the best quality and flavour."
+    },
+
+    {
+        "id" : 5,
+         "name" : "ِArtichoke",
+        "image" : "../img/products/product5.gif",
+        "description" : "Farm-fresh to your table! Naturally grown produce, picked at peak ripeness for the best quality and flavour."
+    },
+
+    {
+        "id" : 6,
+         "name" : "ِArtichoke",
+        "image" : "../img/products/product6.gif",
+        "description" : "Farm-fresh to your table! Naturally grown produce, picked at peak ripeness for the best quality and flavour."
+    },
+
+    {
+        "id" : 7,
+         "name" : "ِArtichoke",
+        "image" : "../img/products/product7.gif",
+        "description" : "Farm-fresh to your table! Naturally grown produce, picked at peak ripeness for the best quality and flavour."
+    },
+
+    {
+        "id" : 8,
+         "name" : "ِArtichoke",
+        "image" : "../img/products/product8.gif",
+        "description" : "Farm-fresh to your table! Naturally grown produce, picked at peak ripeness for the best quality and flavour."
+    },
+
+     {
+        "id" : 9,
+         "name" : "ِArtichoke",
+        "image" : "../img/products/product9.gif",
+        "description" : "Farm-fresh to your table! Naturally grown produce, picked at peak ripeness for the best quality and flavour."
+    },
+
+     {
+        "id" : 10,
+         "name" : "ِArtichoke",
+        "image" : "../img/products/product110.png",
+        "description" : "Farm-fresh to your table! Naturally grown produce, picked at peak ripeness for the best quality and flavour."
+    }
+]

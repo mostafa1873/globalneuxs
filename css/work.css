@@ -1,5 +1,5 @@
 :root {
-    /* الألوان المستخدمة */
+
     --maximum-yellow-red_a10: hsla(41, 99%, 64%, 0.1);
     --maximum-yellow-red: hsl(41, 99%, 64%);
     --orange-red_a20: hsla(19, 100%, 55%, 0.2);
@@ -8,17 +8,17 @@
     --davys-gray: hsl(0, 0%, 33%);
     --jet: hsl(0, 0%, 22%);
     --white: hsl(0, 0%, 100%);
-    /* الخطوط والأحجام */
+
     --ff-jost: 'Jost', sans-serif;
     --fs-26: 2.6rem;
     --fs-18: 1.8rem;
     --fs-14: 1.4rem;
     --fs-12: 1.2rem;
-    /* الأوزان */
+
     --fw-400: 400;
     --fw-500: 500;
     --fw-600: 600;
-    /* إعدادات أخرى */
+
     --section-padding: 60px;
     --shadow: 0 2px 2px hsla(0, 0%, 22%, 0.08);
     --radius-pill: 100px;
@@ -26,6 +26,7 @@
 }
 
 /* Reset */
+
 *,
 ::after,
 ::before {
@@ -78,6 +79,7 @@ body {
 }
 
 /* Utility */
+
 .btn {
     background-color: #0c4a83;
     font-size: var(--fs-14);
@@ -122,9 +124,10 @@ body {
 }
 
 /* --- Portfolio --- */
+
 .portfolio {
     background-color: #fafafa;
-    padding-block-start: calc(var(--section-padding) + 60px);
+    padding-block-start: 40px;
 }
 
 .portfolio-list {
@@ -183,8 +186,8 @@ body {
     margin-block: 10px 20px;
 }
 
-/* --- Media Queries --- */
-/* موبايل: النصوص و chip والزرار في النص */
+/* Media Queries */
+
 @media (max-width: 767px) {
     .portfolio-card {
         text-align: center;
