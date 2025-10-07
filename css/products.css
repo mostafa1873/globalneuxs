@@ -1,8 +1,7 @@
-
 /*  one section */
 
 .contact-bg {
-    height: 60vh;
+    min-height: 60vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../img/bg_3.jpg);
     background-position: 50% 70%;
     background-repeat: no-repeat;
@@ -171,21 +170,21 @@
 
 .listProduct .item .details-button {
     display: inline-block;
-    background: green; 
+    background: green;
     color: #fff;
     border: none;
-    padding: 10px 20px; 
+    padding: 10px 20px;
     border-radius: 8px;
-    font-size: 1rem; 
-    font-weight: 600; 
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    margin-top: 15px; 
-    text-transform: uppercase; 
+    margin-top: 15px;
+    text-transform: uppercase;
 }
 
 .listProduct .item .details-button:hover {
-    background-color: rgb(0, 150, 0); 
-    transform: translateY(-2px); 
-    box-shadow: 0 4px 10px rgba(0, 128, 0, 0.3); 
+    background-color: rgb(0, 150, 0);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 128, 0, 0.3);
 }

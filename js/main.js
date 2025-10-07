@@ -36,8 +36,10 @@ window.addEventListener("scroll", function () {
 const preloader = document.querySelector("[data-preloader]");
 
 window.addEventListener("load", function () {
-  preloader.classList.add("loaded");
-  document.body.classList.add("loaded");
+  setTimeout(() => {
+    preloader.classList.add("loaded");
+    document.body.classList.add("loaded");
+  }, 2000); 
 });
 
 
@@ -102,7 +104,6 @@ function showDetail() {
     newProduct.innerHTML = `
       <img src="${product.image}" alt="">
       <h2>${product.name}</h2>
-      <div class="price">$${product.price}</div>
     `;
     listProduct.appendChild(newProduct);
   });
