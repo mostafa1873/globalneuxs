@@ -1,7 +1,7 @@
 /*  one section */
 
 .contact-bg {
-    min-height: 60vh;
+    min-height: 60dvh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../img/bg_3.jpg);
     background-position: 50% 70%;
     background-repeat: no-repeat;

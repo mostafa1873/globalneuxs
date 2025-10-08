@@ -37,7 +37,7 @@
      border-radius: 2px;
  }
 
-
+ /* PRODUCTS DETAILS*/
  .detail {
      display: flex;
      flex-wrap: wrap;
@@ -53,26 +53,57 @@
      transform: translateY(-5px);
  }
 
+
  .detail .image {
      flex: 1 1 45%;
      min-width: 380px;
      display: flex;
-     justify-content: center;
+     flex-direction: column;
      align-items: center;
      padding: 30px;
      background-color: #ffffff;
      border-left: 1px solid #eee;
  }
 
- .detail .image img {
+ .detail .image img.main-img {
      max-width: 100%;
      max-height: 450px;
      object-fit: contain;
      border-radius: 10px;
      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+     margin-bottom: 15px;
+     cursor: pointer;
+     transition: transform 0.3s ease;
  }
 
- /* المحتوى */
+ .detail .image img.main-img:hover {
+     transform: scale(1.02);
+ }
+
+
+ .extra-images {
+     display: flex;
+     justify-content: center;
+     gap: 10px;
+     flex-wrap: wrap;
+ }
+
+ .extra-images img {
+     width: 90px;
+     height: 90px;
+     object-fit: cover;
+     border-radius: 8px;
+     cursor: pointer;
+     border: 2px solid transparent;
+     transition: all 0.3s ease;
+ }
+
+ .extra-images img:hover {
+     border-color: #0c4a83;
+     transform: scale(1.05);
+ }
+
+
  .detail .content {
      flex: 1 1 55%;
      padding: 40px;
@@ -91,25 +122,23 @@
  }
 
  .detail .content .description {
-     font-size: 1.5rem;
+     font-size: 1.2rem;
      line-height: 1.8;
-     color: black;
+     color: #444;
      margin-bottom: 60px;
-     /* علشان نسيب مساحة للزر */
      text-align: justify;
+     white-space: pre-line;
  }
 
- /* حاوية الزر */
+
  .detail .content .buttons {
      display: flex;
      justify-content: flex-end;
-     /* على اليمين */
      position: absolute;
      bottom: 30px;
      right: 40px;
  }
 
- /* زر واتساب */
  .whatsapp-btn {
      display: inline-flex;
      align-items: center;
@@ -130,12 +159,7 @@
      transform: translateY(-2px);
  }
 
- .whatsapp-btn svg {
-     width: 22px;
-     height: 22px;
- }
 
- /* 4. المنتجات المشابهة (Similar Products) */
  .listProduct {
      display: grid;
      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -152,9 +176,6 @@
      text-decoration: none;
      color: inherit;
      transition: transform 0.3s ease, box-shadow 0.3s ease;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
  }
 
  .listProduct .item:hover {
@@ -181,6 +202,104 @@
      font-size: 1.1rem;
      font-weight: 700;
      color: #e67e22;
+ }
+
+ /* SHOW IMAGES */
+ .lightbox {
+     display: none;
+     position: fixed;
+     inset: 0;
+     z-index: 9999;
+     background: rgba(0, 0, 0, 0.9);
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+ }
+
+ .lightbox-img {
+     max-width: 90%;
+     max-height: 80vh;
+     border-radius: 10px;
+     box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+ }
+
+ .lightbox .close {
+     position: absolute;
+     top: 30px;
+     right: 40px;
+     font-size: 40px;
+     color: #fff;
+     cursor: pointer;
+     transition: color 0.3s;
+ }
+
+ .lightbox .close:hover {
+     color: #f1c40f;
+ }
+
+ .lightbox .nav {
+     position: absolute;
+     top: 50%;
+     font-size: 50px;
+     color: #fff;
+     cursor: pointer;
+     user-select: none;
+     transform: translateY(-50%);
+     transition: color 0.3s;
+ }
+
+ .lightbox .nav.prev {
+     left: 50px;
+ }
+
+ .lightbox .nav.next {
+     right: 50px;
+ }
+
+ .lightbox .nav:hover {
+     color: #f1c40f;
+ }
+
+ /* SHOW IMAGES WINDOW */
+ .image-popup {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.8);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     z-index: 9999;
+     opacity: 0;
+     pointer-events: none;
+     transition: opacity 0.3s ease;
+ }
+
+ .image-popup.active {
+     opacity: 1;
+     pointer-events: auto;
+ }
+
+ .image-popup img {
+     max-width: 90%;
+     max-height: 90%;
+     border-radius: 10px;
+     box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+     animation: zoomIn 0.3s ease;
+ }
+
+ @keyframes zoomIn {
+     from {
+         transform: scale(0.8);
+         opacity: 0;
+     }
+
+     to {
+         transform: scale(1);
+         opacity: 1;
+     }
  }
 
 
@@ -229,8 +348,8 @@
  }
 
 
-
- /* 5. استجابة العرض (Responsive Design) */
+ /* Responsive  */
+ 
  @media (max-width: 992px) {
      .detail {
          flex-direction: column;
@@ -242,19 +361,32 @@
          border-left: none;
      }
 
-     .detail .image {
-         border-bottom: 1px solid #eee;
-     }
-
      .detail .content {
          padding: 30px;
+         position: relative;
      }
 
      .detail .content .buttons {
-         flex-direction: column;
+         position: static;
+         justify-content: center;
+         margin-top: 20px;
      }
 
-     .detail .content button {
+     .whatsapp-btn {
          width: 100%;
+         justify-content: center;
+     }
+
+     .lightbox .nav.prev {
+         left: 15px;
+     }
+
+     .lightbox .nav.next {
+         right: 15px;
+     }
+
+     .lightbox-img {
+         max-width: 95%;
+         max-height: 70vh;
      }
  }
