@@ -1,392 +1,476 @@
- body {
-     margin: 0;
-     padding: 0;
-     font-family: 'Josefin Sans', sans-serif;
-     background-color: #fafafa;
-     color: #333;
-     min-height: 100vh;
- }
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    min-height: 100vh;
+}
 
- .contain {
-     max-width: 1200px;
-     width: 95%;
-     margin: 50px auto;
-     padding: 30px 0;
- }
+/* المحتوى العام */
+.contain {
+    max-width: 1200px;
+    width: 95%;
+    margin: 50px auto;
+    padding: 30px 0;
+}
 
- .title {
-     text-align: center;
-     font-size: 2.5rem;
-     font-weight: 800;
-     color: #2c3e50;
-     margin-bottom: 50px;
-     position: relative;
-     padding-bottom: 15px;
-     margin-top: 100px;
- }
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #2c3e50;
+    margin: 100px 0 50px;
+    position: relative;
+    padding-bottom: 15px;
+}
 
- .title::after {
-     content: '';
-     position: absolute;
-     bottom: 0;
-     left: 50%;
-     transform: translateX(-50%);
-     width: 80px;
-     height: 4px;
-     background-color: #0c4a83;
-     border-radius: 2px;
- }
+.title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #0c4a83;
+    border-radius: 2px;
+}
 
- /* PRODUCTS DETAILS*/
- .detail {
-     display: flex;
-     flex-wrap: wrap;
-     background-color: #ffffff;
-     border-radius: 15px;
-     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-     overflow: hidden;
-     margin-bottom: 80px;
-     transition: transform 0.3s ease-in-out;
- }
+/* PRODUCT DETAILS */
+.detail {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 80px;
+    transition: transform 0.3s ease-in-out;
+}
 
- .detail:hover {
-     transform: translateY(-5px);
- }
+.detail:hover {
+    transform: translateY(-5px);
+}
+
+/* الصورة الأساسية */
+.detail .image {
+    flex: 1 1 45%;
+    min-width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background-color: #ffffff;
+    border-left: 1px solid #eee;
+}
+
+.detail .image img.main-img {
+    max-width: 100%;
+    max-height: 450px;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.detail .image img.main-img:hover {
+    transform: scale(1.02);
+}
+
+/* الصور الإضافية */
+.extra-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.extra-images img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.extra-images img:hover {
+    border-color: #0c4a83;
+    transform: scale(1.05);
+}
+
+/* المحتوى */
+.detail .content {
+    flex: 1 1 55%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.detail .content .name {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #0c4a83;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.detail .content .description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 60px;
+    text-align: justify;
+    white-space: pre-line;
+}
+
+/* الأزرار */
+.detail .content .buttons {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+}
+
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 25px;
+    background-color: #25d366;
+    color: white;
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1ebc57;
+    transform: translateY(-2px);
+}
+
+/* منتجات مشابهة */
+.listProduct {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    justify-items: center;
+}
+
+.listProduct .item {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.listProduct .item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.listProduct .item img {
+    width: 200px;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.listProduct .item h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.listProduct .item .price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #e67e22;
+    text-align: center;
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.lightbox .close:hover {
+    color: #f1c40f;
+}
+
+.lightbox .nav {
+    position: absolute;
+    top: 50%;
+    font-size: 50px;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+    transform: translateY(-50%);
+    transition: color 0.3s;
+}
+
+.lightbox .nav.prev {
+    left: 50px;
+}
+
+.lightbox .nav.next {
+    right: 50px;
+}
+
+.lightbox .nav:hover {
+    color: #f1c40f;
+}
+
+/* Popup */
+.image-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.image-popup.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.image-popup img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* الأقسام الأخرى */
+.about-section {
+    padding: 2rem;
+    background-color: green;
+}
+
+.journey-section {
+    padding: 2rem 1rem;
+}
+
+.journey-container {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.journey-heading {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+    color: white;
+}
+
+.journey-btn {
+    display: inline-block;
+    background-color: transparent;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 800;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    border: 1px solid #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.journey-btn:hover {
+    background-color: #fff;
+    color: #0f3e3a;
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .detail {
+        flex-direction: column;
+        margin-bottom: 60px;
+    }
+
+    .detail .image,
+    .detail .content {
+        min-width: 100%;
+        border-left: none;
+    }
+
+    .detail .image {
+        padding: 20px;
+    }
+
+    .detail .image img.main-img {
+        max-height: 300px;
+    }
+
+    .extra-images {
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .extra-images img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .detail .content {
+        padding: 25px;
+        position: relative;
+    }
+
+    .detail .content .buttons {
+        position: static;
+        justify-content: center;
+        margin-top: 25px;
+    }
+
+    .whatsapp-btn {
+        width: auto;
+        justify-content: center;
+        font-size: 1.2rem;
+        padding: 10px 18px;
+        border-radius: 6px;
+    }
+
+    .lightbox .nav.prev {
+        left: 10px;
+    }
+
+    .lightbox .nav.next {
+        right: 10px;
+    }
+
+    .lightbox-img {
+        max-width: 95%;
+        max-height: 70vh;
+    }
 
 
- .detail .image {
-     flex: 1 1 45%;
-     min-width: 380px;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     padding: 30px;
-     background-color: #ffffff;
-     border-left: 1px solid #eee;
- }
+    .listProduct {
+        gap: 25px;
+    }
 
- .detail .image img.main-img {
-     max-width: 100%;
-     max-height: 450px;
-     object-fit: contain;
-     border-radius: 10px;
-     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-     margin-bottom: 15px;
-     cursor: pointer;
-     transition: transform 0.3s ease;
- }
+    .listProduct .item img {
+        width: 180px;
+        height: 160px;
+    }
 
- .detail .image img.main-img:hover {
-     transform: scale(1.02);
- }
+    .listProduct .item h2 {
+        font-size: 1.2rem;
+    }
+}
 
 
- .extra-images {
-     display: flex;
-     justify-content: center;
-     gap: 10px;
-     flex-wrap: wrap;
- }
+@media (max-width: 576px) {
+    .detail .content .name {
+        font-size: 1.6rem;
+    }
 
- .extra-images img {
-     width: 90px;
-     height: 90px;
-     object-fit: cover;
-     border-radius: 8px;
-     cursor: pointer;
-     border: 2px solid transparent;
-     transition: all 0.3s ease;
- }
+    .detail .content .description {
+        font-size: 1rem;
+        margin-bottom: 40px;
+    }
 
- .extra-images img:hover {
-     border-color: #0c4a83;
-     transform: scale(1.05);
- }
+    .extra-images img {
+        width: 60px;
+        height: 60px;
+    }
 
+    .whatsapp-btn {
+        font-size: 1rem;
+        padding: 8px 14px;
+    }
 
- .detail .content {
-     flex: 1 1 55%;
-     padding: 40px;
-     display: flex;
-     flex-direction: column;
-     justify-content: flex-start;
-     position: relative;
- }
+    .listProduct {
+        gap: 20px;
+    }
 
- .detail .content .name {
-     font-size: 2.2rem;
-     font-weight: 800;
-     color: #0c4a83;
-     margin-bottom: 20px;
-     line-height: 1.3;
- }
+    .listProduct .item {
+        padding: 15px;
+    }
 
- .detail .content .description {
-     font-size: 1.2rem;
-     line-height: 1.8;
-     color: #444;
-     margin-bottom: 60px;
-     text-align: justify;
-     white-space: pre-line;
- }
+    .listProduct .item img {
+        width: 150px;
+        height: 140px;
+    }
 
+    .listProduct .item h2 {
+        font-size: 1.1rem;
+    }
 
- .detail .content .buttons {
-     display: flex;
-     justify-content: flex-end;
-     position: absolute;
-     bottom: 30px;
-     right: 40px;
- }
+    .listProduct .item .price {
+        font-size: 1rem;
+    }
 
- .whatsapp-btn {
-     display: inline-flex;
-     align-items: center;
-     gap: 10px;
-     padding: 14px 25px;
-     background-color: #25d366;
-     color: white;
-     font-weight: 600;
-     font-size: 1.3rem;
-     text-decoration: none;
-     border-radius: 8px;
-     box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
-     transition: all 0.3s ease;
- }
-
- .whatsapp-btn:hover {
-     background-color: #1ebc57;
-     transform: translateY(-2px);
- }
-
-
- .listProduct {
-     display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-     gap: 30px;
-     margin-top: 40px;
- }
-
- .listProduct .item {
-     background-color: #ffffff;
-     border-radius: 12px;
-     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-     padding: 20px;
-     text-align: center;
-     text-decoration: none;
-     color: inherit;
-     transition: transform 0.3s ease, box-shadow 0.3s ease;
- }
-
- .listProduct .item:hover {
-     transform: translateY(-5px);
-     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
- }
-
- .listProduct .item img {
-     max-width: 100%;
-     height: 180px;
-     object-fit: contain;
-     border-radius: 8px;
-     margin-bottom: 15px;
- }
-
- .listProduct .item h2 {
-     font-size: 1.3rem;
-     font-weight: 600;
-     color: #333;
-     margin-bottom: 10px;
- }
-
- .listProduct .item .price {
-     font-size: 1.1rem;
-     font-weight: 700;
-     color: #e67e22;
- }
-
- /* SHOW IMAGES */
- .lightbox {
-     display: none;
-     position: fixed;
-     inset: 0;
-     z-index: 9999;
-     background: rgba(0, 0, 0, 0.9);
-     justify-content: center;
-     align-items: center;
-     flex-direction: column;
- }
-
- .lightbox-img {
-     max-width: 90%;
-     max-height: 80vh;
-     border-radius: 10px;
-     box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
- }
-
- .lightbox .close {
-     position: absolute;
-     top: 30px;
-     right: 40px;
-     font-size: 40px;
-     color: #fff;
-     cursor: pointer;
-     transition: color 0.3s;
- }
-
- .lightbox .close:hover {
-     color: #f1c40f;
- }
-
- .lightbox .nav {
-     position: absolute;
-     top: 50%;
-     font-size: 50px;
-     color: #fff;
-     cursor: pointer;
-     user-select: none;
-     transform: translateY(-50%);
-     transition: color 0.3s;
- }
-
- .lightbox .nav.prev {
-     left: 50px;
- }
-
- .lightbox .nav.next {
-     right: 50px;
- }
-
- .lightbox .nav:hover {
-     color: #f1c40f;
- }
-
- /* SHOW IMAGES WINDOW */
- .image-popup {
-     position: fixed;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     background-color: rgba(0, 0, 0, 0.8);
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     z-index: 9999;
-     opacity: 0;
-     pointer-events: none;
-     transition: opacity 0.3s ease;
- }
-
- .image-popup.active {
-     opacity: 1;
-     pointer-events: auto;
- }
-
- .image-popup img {
-     max-width: 90%;
-     max-height: 90%;
-     border-radius: 10px;
-     box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-     animation: zoomIn 0.3s ease;
- }
-
- @keyframes zoomIn {
-     from {
-         transform: scale(0.8);
-         opacity: 0;
-     }
-
-     to {
-         transform: scale(1);
-         opacity: 1;
-     }
- }
-
-
- .about-section {
-     padding: 2rem;
-     background: #fff;
-     background-color: green;
- }
-
- .journey-section {
-     padding: 2rem 1rem;
- }
-
- .journey-container {
-     max-width: 900px;
-     margin: 0 auto;
-     text-align: center;
-     margin-bottom: 3rem;
- }
-
- .journey-heading {
-     font-size: 22px;
-     font-weight: 700;
-     margin-bottom: 2rem;
-     line-height: 1.4;
-     color: white;
- }
-
- .journey-btn {
-     display: inline-block;
-     background-color: transparent;
-     color: #fff;
-     font-size: 32px;
-     font-weight: 800;
-     padding: 1rem 2.5rem;
-     border-radius: 50px;
-     border: 1px solid #fff;
-     text-decoration: none;
-     transition: all 0.3s ease;
- }
-
- .journey-btn:hover {
-     background-color: #fff;
-     color: #0f3e3a;
-     transform: scale(1.1);
- }
-
-
- /* Responsive  */
- 
- @media (max-width: 992px) {
-     .detail {
-         flex-direction: column;
-     }
-
-     .detail .image,
-     .detail .content {
-         min-width: 100%;
-         border-left: none;
-     }
-
-     .detail .content {
-         padding: 30px;
-         position: relative;
-     }
-
-     .detail .content .buttons {
-         position: static;
-         justify-content: center;
-         margin-top: 20px;
-     }
-
-     .whatsapp-btn {
-         width: 100%;
-         justify-content: center;
-     }
-
-     .lightbox .nav.prev {
-         left: 15px;
-     }
-
-     .lightbox .nav.next {
-         right: 15px;
-     }
-
-     .lightbox-img {
-         max-width: 95%;
-         max-height: 70vh;
-     }
- }
+}
