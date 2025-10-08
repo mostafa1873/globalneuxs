@@ -367,7 +367,128 @@ body {
 
 /* MANULE STEEING */
 
+/* SECTION NEWABO */
+.newabo {
+    padding: 60px 15px;
+    background-color: #fff;
+    margin-top: 40px;
+}
 
+.newabo .cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* الصورة */
+.about-banner {
+    width: 100%;
+    max-width: 800px;
+}
+
+.about-banner img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* محتوى النص */
+.about-cont {
+    width: 100%;
+    text-align: center;
+}
+
+.about-cont .section-subtitle {
+    font-size: 1.6rem;
+    color: #0c4a83;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.about-cont .section-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+/* القائمة accordion */
+.about-cont ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-it {
+    margin-bottom: 20px;
+}
+
+/* CARD ACCORDION */
+.accordion-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.accordion-card .card-title {
+    margin: 0;
+}
+
+.accordion-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 1.6rem;
+    padding: 15px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: #0c4a83;
+}
+
+.accordion-btn .span {
+    flex: 1;
+    text-align: left;
+}
+
+.accordion-btn ion-icon {
+    font-size: 1.6rem;
+    transition: transform 0.3s ease;
+}
+
+/* عند فتح الـaccordion */
+.accordion-card.expanded .accordion-btn ion-icon {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.accordion-card.expanded .accordion-content {
+    max-height: 500px;
+    /* قيمة كبيرة كفاية */
+    padding: 15px 20px 20px;
+}
+
+/* RESPONSIVE */
+
+/* ≥ 768px */
 
 
 /* START HEADER */
@@ -538,7 +659,7 @@ body {
     left: 0;
     width: 100%;
     height: 100dvh;
-    background-color: #47729a;
+    background-color: rgba(0, 0, 0, 0.5);
     display: grid;
     place-items: center;
     z-index: 9999;
@@ -699,17 +820,16 @@ body {
     height: 350px;
     display: flex;
     flex-direction: column;
-    justify-content:space-between; 
+    justify-content: space-between;
     align-items: center;
     padding-block: 45px 25px;
-    overflow: hidden; 
-    color: #ffffff; 
-    text-align: center; 
+    overflow: hidden;
+    color: #ffffff;
+    text-align: center;
     transition: all .6s;
 }
 
-.collection-card:hover
-{
+.collection-card:hover {
     transform: scale(0.9);
 }
 
@@ -721,18 +841,18 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.35);
-    z-index: 1; 
-    transition: background-color 0.3s ease; 
+    z-index: 1;
+    transition: background-color 0.3s ease;
 }
 
 .collection-card .card-title,
 .collection-card .btn-secondary {
     position: relative;
-    z-index: 2; 
+    z-index: 2;
 }
 
 .collection-card .card-title {
-    color: #ffffff; 
+    color: #ffffff;
 }
 
 .collection-card .btn-secondary {
@@ -742,8 +862,7 @@ body {
     transition: all .6s;
 }
 
-.collection-card .btn-secondary:hover
-{
+.collection-card .btn-secondary:hover {
     background-color: #fff;
     color: black;
     transform: scale(1.1);
@@ -1160,6 +1279,25 @@ a.footer-link:is(:hover, :focus) {
    * HEADER
    */
 
+    .newabo .cont {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 60px;
+    }
+
+    .about-cont {
+        width: 50%;
+        text-align: left;
+    }
+
+    .about-banner {
+        width: 50%;
+    }
+
+    .about-cont .section-title {
+        font-size: 2.8rem;
+    }
+
 
     /**
    * SPECIAL
@@ -1439,6 +1577,18 @@ a.footer-link:is(:hover, :focus) {
     .hero-text {
         font-size: var(--fs-6);
         max-width: 50ch;
+    }
+
+     .about-cont .section-title {
+        font-size: 3.2rem;
+    }
+
+    .accordion-btn {
+        font-size: 1.8rem;
+    }
+
+    .accordion-content {
+        font-size: 1.6rem;
     }
 
 
