@@ -64,56 +64,58 @@
                 </button>
 
                 <a href="../index.html" class="logo">
-                    <img src="../img/logo.svg" width="190" height="50" alt="Global-Nexus logo">
+                    <img src="../img/logo.svg" width="190" height="50" alt="Global Nexus Company">
                 </a>
 
                 <ul class="navbar-list">
 
                     <li class="navbar-item">
-                        <a href='../index.html' class="navbar-link">Home</a>
+                        <a href='../index.html' data-lang="nav_home" class="navbar-link"></a>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="services.html" class="navbar-link">Services</a>
+                        <a href="services.html" data-lang="nav_services" class="navbar-link"></a>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="work.html" class="navbar-link">Our Work</a>
+                        <a href="work.html" data-lang="nav_ourwork" class="navbar-link"></a>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="products.html" class="navbar-link">Products</a>
+                        <a href="products.html" data-lang="nav_products" class="navbar-link"></a>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="about.html" class="navbar-link">About</a>
+                        <a href="about.html" data-lang="nav_about" class="navbar-link"></a>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="contact.html" class="navbar-link">Contact Us</a>
+                        <a href="contact.html" data-lang="nav_contact" class="navbar-link"></a>
                     </li>
 
                 </ul>
 
                 <ul class="nav-action-list">
 
-                    <li style="display: flex;">
-                        <button class="nav-action-btn">
-                            <ion-icon name="logo-facebook"></ion-icon>
+                    <div class="lang-dropdown">
+                        <button class="lang-btn" id="current-lang">
+                            <img src="../img/gb.png" alt="English Flag">
+                            English
+                            <span class="arrow">▼</span>
                         </button>
 
-                        <button class="nav-action-btn">
-                            <ion-icon name="logo-instagram"></ion-icon>
-                        </button>
-
-                        <button class="nav-action-btn">
-                            <ion-icon name="logo-whatsapp"></ion-icon>
-                        </button>
-
-                        <button class="nav-action-btn">
-                            <ion-icon name="logo-google"></ion-icon>
-                        </button>
-                    </li>
+                        <div class="lang-menu">
+                            <button onclick="changeLanguage('en', '../img/gb.png' ,'English')">
+                                <img src="../img/gb.png" alt="English Flag"> English
+                            </button>
+                            <button onclick="changeLanguage('ar',  '../img/eg.png' ,'العربية')">
+                                <img src="../img/eg.png" alt="Arabic Flag"> العربية
+                            </button>
+                            <button onclick="changeLanguage('it',  '../img/it.png' ,'Italiano')">
+                                <img src="../img/it.png" alt="Italian Flag"> Italiano
+                            </button>
+                        </div>
+                    </div>
 
                 </ul>
 
@@ -126,68 +128,59 @@
     <!-- MAIN SECTION -->
 
     <section class="warper">
-        <h1>We Create Growth: Services That Open Up the World.</h1>
-        <p>Connecting Produce with Digital Quality. Your full-service partner for vegetable export, software
-            development, and global marketing.</p>
+        <h1 data-lang="about_page_warper_h1"></h1>
+        <p data-lang="about_page_warper_p"></p>
 
         <div class="content-box">
             <div class="card">
                 <ion-icon name="laptop"></ion-icon>
-                <h2>Web Development</h2>
-                <p>Professional, high-performance websites and powerful web applications optimized for speed, security.
-                </p>
+                <h2 data-lang="warper_content-box_card_1_h2"></h2>
+                <p data-lang="warper_content-box_card_1_p"></p>
             </div>
 
             <div class="card">
                 <ion-icon name="trending-up"></ion-icon>
-                <h2>Digital Marketing</h2>
-                <p>Creating high-impact Pay-Per-Click campaigns that precisely target.
-                </p>
+                <h2 data-lang="warper_content-box_card_2_h2"></h2>
+                <p data-lang="warper_content-box_card_2_p"></p>
             </div>
 
             <div class="card">
                 <ion-icon name="cloud-done-outline"></ion-icon>
-                <h2>Verified & Supported.</h2>
-                <p>Full Social Media Management.
-                </p>
+                <h2 data-lang="warper_content-box_card_3_h2"></h2>
+                <p data-lang="warper_content-box_card_3_p"></p>
             </div>
 
             <div class="card">
                 <ion-icon name="image"></ion-icon>
-                <h2>Graphic Design</h2>
-                <p>cohesive visual language, including logos, color palettes, and typography.
-                </p>
+                <h2 data-lang="warper_content-box_card_4_h2"></h2>
+                <p data-lang="warper_content-box_card_4_p"></p>
             </div>
 
             <div class="card">
                 <ion-icon name="phone-portrait"></ion-icon>
-                <h2>Mobile Application Development</h2>
-                <p>Native and cross-platform mobile apps (iOS & Android) that provide on-the-go access to crucial
-                    business data and client-facing services.
-                </p>
+                <h2 data-lang="warper_content-box_card_5_h2"></h2>
+                <p data-lang="warper_content-box_card_5_p"></p>
             </div>
 
             <div class="card">
                 <ion-icon name="code-working"></ion-icon>
-                <h2>Custom Software Development</h2>
-                <p>We engineer bespoke applications, databases, and digital tools tailored specifically to manage
-                    complex logistics.
-                </p>
+                <h2 data-lang="warper_content-box_card_6_h2"></h2>
+                <p data-lang="warper_content-box_card_6_p"></p>
             </div>
         </div>
     </section>
 
-     <!-- BANNER  SECTION -->
+    <!-- BANNER  SECTION -->
     <section class="section cta">
         <div class="contain">
 
             <div class="cta-card" style="background-image: url('../img/bg.jpg')">
-                <p class="card-subtitle">Fresh Vegetables Export</p>
+                <p data-lang="about_page_section cta_p" class="card-subtitle"></p>
 
-                <h3 class="h2 card-title">Fresh. Natural. Global</h3>
+                <h3 data-lang="about_page_section cta_h3" class="h2 card-title"></h3>
 
                 <a href="../pages/products.html" class="btn btn-link">
-                    <span>Explore Products</span>
+                    <span data-lang="about_page_section cta_span"></span>
 
                     <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                 </a>
@@ -197,17 +190,89 @@
     </section>
     <!-- BANNER SECTION  -->
 
+    <!-- SERVICES SECTION -->
+    <section class="section service">
+        <div class="container">
+
+            <ul class="service-list">
+
+                <li class="service-item">
+                    <div class="service-card">
+
+                        <div class="card-icon">
+                            <img src="../img/service-1.png" width="53" height="28" loading="lazy" alt="Service icon">
+                        </div>
+
+                        <div>
+                            <h3 data-lang="about_page_service_card-icon_1_h3" class="h4 card-title"></h3>
+
+                            <p data-lang="about_page_service_card-icon_1_p" class="card-text"></p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="service-item">
+                    <div class="service-card">
+
+                        <div class="card-icon">
+                            <img src="../img/service-2.png" width="43" height="35" loading="lazy" alt="Service icon">
+                        </div>
+
+                        <div>
+                            <h3 data-lang="about_page_service_card-icon_2_h3" class="h4 card-title"></h3>
+
+                            <p data-lang="about_page_service_card-icon_2_p" class="card-text"></p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="service-item">
+                    <div class="service-card">
+
+                        <div class="card-icon">
+                            <img src="../img/service-3.png" width="40" height="40" loading="lazy" alt="Service icon">
+                        </div>
+
+                        <div>
+                            <h3 data-lang="about_page_service_card-icon_3_h3" class="h4 card-title"></h3>
+
+                            <p data-lang="about_page_service_card-icon_3_p" class="card-text"></p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="service-item">
+                    <div class="service-card">
+
+                        <div class="card-icon">
+                            <img src="../img/service-4.png" width="40" height="40" loading="lazy" alt="Service icon">
+                        </div>
+
+                        <div>
+                            <h3 data-lang="about_page_service_card-icon_4_h3" class="h4 card-title"></h3>
+
+                            <p data-lang="about_page_service_card-icon_4_p" class="card-text"></p>
+                        </div>
+
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+    </section>
+    <!-- SERVICES SECTION -->
+
+    <!-- ABOUT SECTION -->
     <section class="about-section">
         <section class="journey-section">
             <div class="journey-container">
-                <h1 class="journey-heading">
-                    Start the Growth Journey with Us! Request a free consultation about your logistical and
-                    technical needs.
-                </h1>
-                <a href="#!" class="journey-btn">Start Journey</a>
+                <h1 data-lang="section_h1_journey-heading" class="journey-heading"></h1>
+                <a data-lang="section_a_journey-heading" href="#!" class="journey-btn"></a>
             </div>
         </section>
     </section>
+    <!-- ABOUT SECTION -->
 
     <!-- COLLECTION SECTION -->
     <section class="section collection">
@@ -217,10 +282,10 @@
 
                 <li>
                     <div class="collection-card" style="background-image: url('../img/program-.png')">
-                        <h3 style="margin-bottom: 5px;" class="h4 card-title">Smart Code, Smart Solutions</h3>
+                        <h3 data-lang="about_page_collection-card_1_h3" style="margin-bottom: 5px;" class="h4 card-title"></h3>
 
                         <a href="../pages/work.html" class="btn btn-secondary">
-                            <span>Explore All</span>
+                            <span data-lang="about_page_collection-card_1_span"></span>
 
                             <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                         </a>
@@ -229,10 +294,10 @@
 
                 <li>
                     <div class="collection-card" style="background-image: url('../img/export.jpeg')">
-                        <h3 style="margin-bottom: 5px;" class="h4 card-title">Export Vegetables</h3>
+                        <h3 data-lang="about_page_collection-card_2_h3" style="margin-bottom: 5px;" class="h4 card-title"></h3>
 
                         <a href="../pages/products.html" class="btn btn-secondary">
-                            <span>Explore All</span>
+                            <span data-lang="about_page_collection-card_2_span"></span>
 
                             <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                         </a>
@@ -241,10 +306,10 @@
 
                 <li>
                     <div class="collection-card" style="background-image: url('../img/digital-.jpeg')">
-                        <h3 style="margin-bottom: 5px;" class="h4 card-title">Digital Marketing</h3>
+                        <h3 data-lang="about_page_collection-card_3_h3" style="margin-bottom: 5px;" class="h4 card-title"></h3>
 
                         <a href="../pages/work.html" class="btn btn-secondary">
-                            <span>Explore All</span>
+                            <span data-lang="about_page_collection-card_3_span"></span>
 
                             <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                         </a>
@@ -259,6 +324,7 @@
 
     <!-- MAIN SECTION -->
 
+    
     <!-- FOOTER -->
     <footer class="footer">
 

@@ -62,56 +62,58 @@
                 </button>
 
                 <a href="../index.html" class="logo">
-                    <img src="../img/logo.svg" width="190" height="50" alt="Global-Nexus logo">
+                    <img src="../img/logo.svg" width="190" height="50" alt="Global Nexus Company">
                 </a>
 
                 <ul class="navbar-list">
 
                     <li class="navbar-item">
-                        <a href='../index.html' class="navbar-link">Home</a>
+                        <a href='../index.html' data-lang="nav_home" class="navbar-link"></a>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="services.html" class="navbar-link">Services</a>
+                        <a href="services.html" data-lang="nav_services" class="navbar-link"></a>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="work.html" class="navbar-link">Our Work</a>
+                        <a href="work.html" data-lang="nav_ourwork" class="navbar-link"></a>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="products.html" class="navbar-link">Products</a>
+                        <a href="products.html" data-lang="nav_products" class="navbar-link"></a>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="about.html" class="navbar-link">About</a>
+                        <a href="about.html" data-lang="nav_about" class="navbar-link"></a>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="contact.html" class="navbar-link">Contact Us</a>
+                        <a href="contact.html" data-lang="nav_contact" class="navbar-link"></a>
                     </li>
 
                 </ul>
 
                 <ul class="nav-action-list">
 
-                    <li style="display: flex;">
-                        <button class="nav-action-btn">
-                            <ion-icon name="logo-facebook"></ion-icon>
+                    <div class="lang-dropdown">
+                        <button class="lang-btn" id="current-lang">
+                            <img src="../img/gb.png" alt="English Flag">
+                            English
+                            <span class="arrow">▼</span>
                         </button>
 
-                        <button class="nav-action-btn">
-                            <ion-icon name="logo-instagram"></ion-icon>
-                        </button>
-
-                        <button class="nav-action-btn">
-                            <ion-icon name="logo-whatsapp"></ion-icon>
-                        </button>
-
-                        <button class="nav-action-btn">
-                            <ion-icon name="logo-google"></ion-icon>
-                        </button>
-                    </li>
+                        <div class="lang-menu">
+                            <button onclick="changeLanguage('en', '../img/gb.png' ,'English')">
+                                <img src="../img/gb.png" alt="English Flag"> English
+                            </button>
+                            <button onclick="changeLanguage('ar',  '../img/eg.png' ,'العربية')">
+                                <img src="../img/eg.png" alt="Arabic Flag"> العربية
+                            </button>
+                            <button onclick="changeLanguage('it',  '../img/it.png' ,'Italiano')">
+                                <img src="../img/it.png" alt="Italian Flag"> Italiano
+                            </button>
+                        </div>
+                    </div>
 
                 </ul>
 
@@ -125,17 +127,17 @@
     <section class="contact-section">
         <div class="contact-container">
             <div class="contact-card animated-card">
-                <h2 class="contact-title">Contact Us</h2>
-                <p class="contact-desc">We are happy to contact you for any inquiries or suggestions.<br>Your message
-                    will be sent directly to the company's email.</p>
+                <h2 data-lang="contact_page_h2" class="contact-title"></h2>
+                <p class="contact-desc">
+                    <span data-lang="contact_page_span"></span>
+                </p>
                 <form id="contactForm" class="contact-form">
                     <input type="text" name="name" placeholder="Name" required>
                     <input type="email" name="email" placeholder="Email" required>
                     <textarea name="message" placeholder="Write Your Massege Here" rows="5" required></textarea>
-                    <button type="submit" class="contact-btn">Sent</button>
+                    <button type="submit" class="contact-btn" data-lang="contact_page_button"></button>
                 </form>
-                <div id="contactSuccess" class="contact-success">Your message has been sent successfully! Thank you for
-                    contacting us.</div>
+                <div id="contactSuccess" class="contact-success" data-lang="contact_page_contactSuccess"></div>
             </div>
             <div class="contact-side">
                 <div class="contact-map">

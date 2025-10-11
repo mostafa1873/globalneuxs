@@ -367,129 +367,6 @@ body {
 
 /* MANULE STEEING */
 
-/* SECTION NEWABO */
-.newabo {
-    padding: 60px 15px;
-    background-color: #fff;
-    margin-top: 40px;
-}
-
-.newabo .cont {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* الصورة */
-.about-banner {
-    width: 100%;
-    max-width: 800px;
-}
-
-.about-banner img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    object-fit: cover;
-}
-
-/* محتوى النص */
-.about-cont {
-    width: 100%;
-    text-align: center;
-}
-
-.about-cont .section-subtitle {
-    font-size: 1.6rem;
-    color: #0c4a83;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
-.about-cont .section-title {
-    font-size: 2.4rem;
-    font-weight: 700;
-    margin-bottom: 25px;
-    line-height: 1.4;
-}
-
-/* القائمة accordion */
-.about-cont ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.about-it {
-    margin-bottom: 20px;
-}
-
-/* CARD ACCORDION */
-.accordion-card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-.accordion-card .card-title {
-    margin: 0;
-}
-
-.accordion-btn {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    font-size: 1.6rem;
-    padding: 15px 20px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-weight: 600;
-    color: #0c4a83;
-}
-
-.accordion-btn .span {
-    flex: 1;
-    text-align: left;
-}
-
-.accordion-btn ion-icon {
-    font-size: 1.6rem;
-    transition: transform 0.3s ease;
-}
-
-/* عند فتح الـaccordion */
-.accordion-card.expanded .accordion-btn ion-icon {
-    transform: rotate(180deg);
-}
-
-.accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 20px;
-    transition: all 0.3s ease;
-    font-size: 1.5rem;
-    line-height: 1.6;
-    color: #333;
-}
-
-.accordion-card.expanded .accordion-content {
-    max-height: 500px;
-    /* قيمة كبيرة كفاية */
-    padding: 15px 20px 20px;
-}
-
-/* RESPONSIVE */
-
-/* ≥ 768px */
-
 
 /* START HEADER */
 
@@ -634,6 +511,95 @@ body {
     color: var(--bittersweet);
 }
 
+/* DROWP DOWN */
+
+.lang-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.lang-btn {
+    background: white;
+    color: #0c4a83;
+    border: 2px solid #0c4a83;
+    border-radius: 12px;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+    background: #0c4a83;
+    color: white;
+}
+
+.lang-btn img {
+    width: 22px;
+    height: 16px;
+    border-radius: 3px;
+}
+
+.lang-btn .arrow {
+    font-size: 12px;
+    margin-left: 4px;
+    transition: transform 0.3s ease;
+}
+
+/* DROP DOWEN */
+.lang-menu {
+    position: absolute;
+    top: 110%;
+    right: 0;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.lang-menu button {
+    border: none;
+    background: none;
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.lang-menu button:hover {
+    background: #f3f5ff;
+}
+
+.lang-menu img {
+    width: 22px;
+    height: 16px;
+    border-radius: 3px;
+}
+
+.lang-dropdown.active .lang-menu {
+    display: flex;
+}
+
+.lang-dropdown.active .arrow {
+    transform: rotate(180deg);
+}
+
+/* DRWOP DOWN */
+
 .overlay {
     position: fixed;
     inset: 0;
@@ -702,6 +668,7 @@ body {
 /* START HOME */
 
 .hero {
+    background-image: url('../img/hero\ page1.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -709,6 +676,18 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    transition: all 0.4s ease;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    padding: 40px;
+}
+
+html[dir="rtl"] .hero {
+    transform: scaleX(-1);
+}
+
+html[dir="rtl"] .hero .container {
+    transform: scaleX(-1);
 }
 
 .hero-title {
@@ -762,6 +741,123 @@ body {
     transform: translateX(4px);
 }
 
+
+/* SECTION NEWABO */
+.newabo {
+    padding: 60px 15px;
+    background-color: #fff;
+    margin-top: 40px;
+}
+
+.newabo .cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-bann {
+    width: 100%;
+    max-width: 800px;
+}
+
+.about-bann img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.about-cont {
+    width: 100%;
+    text-align: center;
+}
+
+.about-cont .section-subtitle {
+    font-size: 1.6rem;
+    color: #0c4a83;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.about-cont .section-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+.about-cont ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-it {
+    margin-bottom: 20px;
+}
+
+/* CARD ACCORDION */
+
+.accordion-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.accordion-card .card-title {
+    margin: 0;
+}
+
+.accordion-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 1.6rem;
+    padding: 15px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: #0c4a83;
+}
+
+.accordion-btn .span {
+    flex: 1;
+    text-align: left;
+}
+
+.accordion-btn ion-icon {
+    font-size: 1.6rem;
+    transition: transform 0.3s ease;
+}
+
+.accordion-card.expanded .accordion-btn ion-icon {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.accordion-card.expanded .accordion-content {
+    max-height: 500px;
+    padding: 15px 20px 20px;
+}
+
+/* END */
 
 /* CTA Card */
 
@@ -867,6 +963,65 @@ body {
     color: black;
     transform: scale(1.1);
 }
+
+/* COLLECTION SECTION */
+
+
+/* STATS SECTION */
+
+.stats-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    overflow: hidden;
+
+}
+
+.stat-card {
+    width: 250px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 250px;
+    height: 180px;
+    padding: 30px 20px;
+    background-color: #f0f0f4;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow:
+        -5px -5px 10px rgba(255, 255, 255, 0.7),
+        5px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all .6s;
+}
+
+.stat-card:hover {
+    transform: scale(0.9);
+}
+
+.stat-number {
+    color: #4a90e2;
+    font-size: 3.5em;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: #6c757d;
+    font-size: 0.9em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+/* STATS SECTION */
+
 
 /* ABOUT SECTION */
 
@@ -1175,67 +1330,71 @@ a.footer-link:is(:hover, :focus) {
         font-size: var(--fs-7);
     }
 
+ 
+}
 
 
-    /**
+
+
+/**
    * PRODUCTS
    */
 
-    .product-list {
-        grid-template-columns: 1fr 1fr;
-    }
+.product-list {
+    grid-template-columns: 1fr 1fr;
+}
 
 
 
-    /**
+/**
    * CTA
    */
 
-    .cta-card {
-        text-align: left;
-    }
+.cta-card {
+    text-align: left;
+}
 
-    .cta-card .card-title {
-        max-width: 14ch;
-    }
+.cta-card .card-title {
+    max-width: 14ch;
+}
 
-    .cta-card .btn-link {
-        margin-inline: 0;
-    }
+.cta-card .btn-link {
+    margin-inline: 0;
+}
 
 
 
-    /**
+/**
    * INSTA POST
    */
 
-    .insta-post-list .insta-post-item {
-        min-width: 25%;
-    }
+.insta-post-list .insta-post-item {
+    min-width: 25%;
+}
 
 
 
-    /**
+/**
    * FOOTER
    */
 
-    .footer-brand .logo {
-        margin-bottom: 0;
-    }
-
-    .footer-brand {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .footer-link-box {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 30px;
-    }
-
+.footer-brand .logo {
+    margin-bottom: 0;
 }
+
+.footer-brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-link-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+}
+
+
 
 
 
@@ -1290,7 +1449,7 @@ a.footer-link:is(:hover, :focus) {
         text-align: left;
     }
 
-    .about-banner {
+    .about-bann {
         width: 50%;
     }
 
@@ -1579,7 +1738,7 @@ a.footer-link:is(:hover, :focus) {
         max-width: 50ch;
     }
 
-     .about-cont .section-title {
+    .about-cont .section-title {
         font-size: 3.2rem;
     }
 

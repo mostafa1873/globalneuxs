@@ -41,89 +41,91 @@
     <!---#PRELOADER-->
 
     <!-- HEADER -->
-    <header class="header" data-header>
-        <div class="container">
+  <header class="header" data-header>
+    <div class="container">
 
-            <div class="overlay" data-overlay></div>
+      <div class="overlay" data-overlay></div>
 
-            <a href="../index.html" class="logo">
-                <img src="../img/logo.svg" width="160" height="50" alt="Global-Nexus logo">
-            </a>
+      <a href="../index.html" class="logo">
+        <img src="../img/logo.svg" width="160" height="50" alt="Global-Nexus logo">
+      </a>
 
-            <button class="nav-open-btn" style="background-color: #0c4a83;" data-nav-open-btn aria-label="Open Menu">
-                <ion-icon name="menu-outline"></ion-icon>
+      <button class="nav-open-btn" style="background-color: #0c4a83;" data-nav-open-btn aria-label="Open Menu">
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <nav class="navbar" data-navbar>
+
+        <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+
+        <a href="../index.html" class="logo">
+          <img src="../img/logo.svg" width="190" height="50" alt="Global Nexus Company">
+        </a>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href='../index.html' data-lang="nav_home" class="navbar-link"></a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="services.html" data-lang="nav_services" class="navbar-link"></a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="work.html" data-lang="nav_ourwork" class="navbar-link"></a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="products.html" data-lang="nav_products" class="navbar-link"></a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="about.html" data-lang="nav_about" class="navbar-link"></a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="contact.html" data-lang="nav_contact" class="navbar-link"></a>
+          </li>
+
+        </ul>
+
+        <ul class="nav-action-list">
+
+          <div class="lang-dropdown">
+            <button class="lang-btn" id="current-lang">
+              <img src="../img/gb.png" alt="English Flag">
+              English
+              <span class="arrow">▼</span>
             </button>
 
-            <nav class="navbar" data-navbar>
+            <div class="lang-menu">
+              <button onclick="changeLanguage('en', '../img/gb.png' ,'English')">
+                <img src="../img/gb.png" alt="English Flag"> English
+              </button>
+              <button onclick="changeLanguage('ar',  '../img/eg.png' ,'العربية')">
+                <img src="../img/eg.png" alt="Arabic Flag"> العربية
+              </button>
+              <button onclick="changeLanguage('it',  '../img/it.png' ,'Italiano')">
+                <img src="../img/it.png" alt="Italian Flag"> Italiano
+              </button>
+            </div>
+          </div>
 
-                <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
-                    <ion-icon name="close-outline"></ion-icon>
-                </button>
+        </ul>
 
-                <a href="../index.html" class="logo">
-                    <img src="../img/logo.svg" width="190" height="50" alt="Global-Nexus logo">
-                </a>
+      </nav>
 
-                <ul class="navbar-list">
-
-                    <li class="navbar-item">
-                        <a href='../index.html' class="navbar-link">Home</a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="services.html" class="navbar-link">Services</a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="work.html" class="navbar-link">Our Work</a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="products.html" class="navbar-link">Products</a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="about.html" class="navbar-link">About</a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="contact.html" class="navbar-link">Contact Us</a>
-                    </li>
-
-                </ul>
-
-                <ul class="nav-action-list">
-
-                    <li style="display: flex;">
-                        <button class="nav-action-btn">
-                            <ion-icon name="logo-facebook"></ion-icon>
-                        </button>
-
-                        <button class="nav-action-btn">
-                            <ion-icon name="logo-instagram"></ion-icon>
-                        </button>
-
-                        <button class="nav-action-btn">
-                            <ion-icon name="logo-whatsapp"></ion-icon>
-                        </button>
-
-                        <button class="nav-action-btn">
-                            <ion-icon name="logo-google"></ion-icon>
-                        </button>
-                    </li>
-
-                </ul>
-
-            </nav>
-
-        </div>
-    </header>
-    <!-- HEADER -->
+    </div>
+  </header>
+  <!-- HEADER -->
 
     <!-- MAIN SECTION -->
 
     <div class="contain">
-        <h2 class="title">Product Details</h2>
+        <h2 data-lang="details_page_contain_title" class="title"></h2>
         <div class="detail">
             <div class="image"> <img src="" alt="Product image" class="main-img">
                 <div class="extra-images"></div>
@@ -138,7 +140,7 @@
                         </svg> WhatsApp </a> </div>
             </div>
         </div>
-        <h2 class="title">More Products</h2>
+        <h2 data-lang="details_page_contain_h2" class="title"></h2>
         <div class="listProduct"></div>
     </div>
     <div class="lightbox"> <span class="close">&times;</span> <img class="lightbox-img" src="" alt="">

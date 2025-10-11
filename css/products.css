@@ -1,4 +1,7 @@
 /*  one section */
+body {
+    font-family: 'Cairo', 'Tajawal', 'Roboto', sans-serif;
+}
 
 .contact-bg {
     min-height: 60dvh;
@@ -105,6 +108,34 @@
     }
 }
 
+/* FILTER BUTTON */
+
+.filter-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    background-color: #21b921;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    margin: 0 8px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: #123b12;
+}
+
+/* FILTER BUTTON */
 
 
 .listProduct {

@@ -39,14 +39,13 @@
 
 
     <!-- START HEADER -->
-
     <header class="header" data-header>
         <div class="container">
 
             <div class="overlay" data-overlay></div>
 
             <a href="index.html" class="logo">
-                <img src="img/logo.svg" width="160" height="50" alt="Global-Nexus logo">
+                <img src="img/logo.svg" width="160" height="50" alt="Global Nexus Company">
             </a>
 
             <button class="nav-open-btn" style="background-color: #0c4a83;" data-nav-open-btn aria-label="Open Menu">
@@ -66,104 +65,102 @@
                 <ul class="navbar-list">
 
                     <li class="navbar-item">
-                        <a href='index.html' class="navbar-link">Home</a>
+                        <a href='index.html' data-lang="nav_home" class="navbar-link"></a>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="pages/services.html" class="navbar-link">Services</a>
+                        <a href="pages/services.html" data-lang="nav_services" class="navbar-link"></a>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="pages/work.html" class="navbar-link">Our Work</a>
+                        <a href="pages/work.html" data-lang="nav_ourwork" class="navbar-link"></a>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="pages/products.html" class="navbar-link">Products</a>
+                        <a href="pages/products.html" data-lang="nav_products" class="navbar-link"></a>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="pages/about.html" class="navbar-link">About</a>
+                        <a href="pages/about.html" data-lang="nav_about" class="navbar-link"></a>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="pages/contact.html" class="navbar-link">Contact Us</a>
+                        <a href="pages/contact.html" data-lang="nav_contact" class="navbar-link"></a>
                     </li>
 
                 </ul>
 
                 <ul class="nav-action-list">
 
-                    <li style="display: flex;">
-                        <button class="nav-action-btn">
-                            <ion-icon name="logo-facebook"></ion-icon>
+                    <div class="lang-dropdown">
+                        <button class="lang-btn" id="current-lang">
+                            <img src="img/gb.png" alt="English Flag">
+                            English
+                            <span class="arrow">▼</span>
                         </button>
 
-                        <button class="nav-action-btn">
-                            <ion-icon name="logo-instagram"></ion-icon>
-                        </button>
+                        <div class="lang-menu">
+                            <button onclick="changeLanguage('en', 'img/gb.png' ,'English')">
+                                <img src="img/gb.png" alt="English Flag"> English
+                            </button>
+                            <button onclick="changeLanguage('ar',  'img/eg.png' ,'العربية')">
+                                <img src="img/eg.png" alt="Arabic Flag"> العربية
+                            </button>
+                            <button onclick="changeLanguage('it',  'img/it.png' ,'Italiano')">
+                                <img src="img/it.png" alt="Italian Flag"> Italiano
+                            </button>
+                        </div>
+                    </div>
 
-                        <button class="nav-action-btn">
-                            <ion-icon name="logo-whatsapp"></ion-icon>
-                        </button>
+            </nav>
 
-                        <button class="nav-action-btn">
-                            <ion-icon name="logo-google"></ion-icon>
-                        </button>
-                    </li>
-
-                </ul>
+            </ul>
 
             </nav>
 
         </div>
     </header>
-
     <!-- END HEADER -->
 
     <!-- START HOME -->
     <main>
         <article>
 
-            <section class="section hero" style="background-image: url('img/hero\ page1.png')">
+            <!-- ONE SECTION -->
+            <section class="section hero" id="hero-section">
                 <div class="container">
 
                     <h2 class="h1 hero-title">
-                        Your Integrated
-                        Solution: <strong style="color: #0c4a83;">Export, Code, Market.</strong>
+                        <span data-lang="h1_hero_title"></span>
+                        <strong data-lang="strong_hero_title" style="color: #0c4a83;"></strong>
                     </h2>
+                    
 
-                    <p class="hero-text">
-                        exporting high-quality Vegetables, the skill of
-                        advanced Electronic Programming, and the professionalism of effective Digital Marketing. Our
-                        goal is to empower our clients to achieve maximum benefit in global and local markets.
+                    <p data-lang="p_hero-text" class="hero-text">
                     </p>
 
-                    <a href="#contact" class="btn-home">
-                        Contact Us
+                    <a data-lang="btn_hero" href="#contact" class="btn-home">
                         <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                     </a>
 
                 </div>
             </section>
+            <!-- ONE SECTION -->
 
             <!-- NEW SECTION -->
-
             <section class="newabo" aria-labelledby="about-label">
                 <div class="cont">
 
-                    <figure class="about-banner">
-                        <img src="img/about-banner.png" width="800" height="580" loading="lazy" alt="about banner"
-                            class="w-100">
+                    <figure class="about-bann">
+                        <img src="img/about-banner.png" width="800" height="580" loading="lazy"
+                            alt="about us Global Neuxs" class="w-100">
                     </figure>
 
                     <div class="about-cont">
 
-                        <p class="section-subtitle" id="about-label">Global Nexus</p>
+                        <p data-lang="p_section-subtitle" class="section-subtitle" id="about-label"></p>
 
-                        <h2 class="h2 section-title">
-                            dynamic company specializing in exporting fresh vegetables, providing cutting-edge
-                            programming solutions, and delivering innovative digital marketing services.
-                        </h2>
+                        <h2 data-lang="h2 section-title" class="h2 section-title"></h2>
 
                         <ul>
 
@@ -175,15 +172,11 @@
                                             <ion-icon name="chevron-down-outline" aria-hidden="true"
                                                 class="down"></ion-icon>
 
-                                            <spna class="span h5">Vegetable Export</spna>
+                                            <spna data-lang="about-it_h5_1" class="span h5"></spna>
                                         </button>
                                     </h3>
 
-                                    <p class="accordion-content">
-                                        exporting fresh, high-quality vegetables to international markets. We ensure
-                                        timely delivery and maintain the highest standards of freshness, helping
-                                        businesses access nutritious produce reliably.
-                                    </p>
+                                    <p data-lang="p_accordion-content_1" class="accordion-content"></p>
 
                                 </div>
                             </li>
@@ -196,15 +189,11 @@
                                             <ion-icon name="chevron-down-outline" aria-hidden="true"
                                                 class="down"></ion-icon>
 
-                                            <spna class="span h5">Programming Solutions</spna>
+                                            <spna data-lang="span_h5_2" class="span h5"></spna>
                                         </button>
                                     </h3>
 
-                                    <p class="accordion-content">
-                                        We provide innovative programming and software solutions tailored to meet the
-                                        unique needs of our clients. From web development to custom applications, Global
-                                        Nexus helps businesses optimize processes and achieve their goals efficiently.
-                                    </p>
+                                    <p data-lang="p_accordion-content_2" class="accordion-content"> </p>
 
                                 </div>
                             </li>
@@ -217,15 +206,11 @@
                                             <ion-icon name="chevron-down-outline" aria-hidden="true"
                                                 class="down"></ion-icon>
 
-                                            <spna class="span h5">Digital Marketing</spna>
+                                            <spna data-lang="span_h5_3" class="span h5"></spna>
                                         </button>
                                     </h3>
 
-                                    <p class="accordion-content">
-                                        Global Nexus offers creative digital marketing strategies that boost brand
-                                        visibility and engagement. We specialize in social media, SEO, and targeted
-                                        campaigns to help businesses grow in the online marketplace.
-                                    </p>
+                                    <p data-lang="p_accordion-content_3" class="accordion-content"></p>
 
                                 </div>
                             </li>
@@ -236,9 +221,7 @@
 
                 </div>
             </section>
-
             <!-- NEW SECTION -->
-
 
             <!-- BANNER  SECTION -->
             <section class="section cta">
@@ -248,12 +231,12 @@
 
                         <li>
                             <div class="cta-card" style="background-image: url('img/services3.jpg')">
-                                <p class="card-subtitle">Fresh Vegetables Export</p>
+                                <p data-lang="section_P_cta-card_1" class="card-subtitle"></p>
 
-                                <h3 class="h2 card-title">Fresh. Natural. Global</h3>
+                                <h3 data-lang="section_h3_cta-card_1" class="h2 card-title"></h3>
 
                                 <a href="pages/products.html" class="btn btn-link">
-                                    <span>Explore Products</span>
+                                    <span data-lang="section_span_cta-card_1"></span>
 
                                     <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                                 </a>
@@ -262,12 +245,12 @@
 
                         <li>
                             <div class="cta-card" style="background-image: url('img/servviecs.png')">
-                                <p class="card-subtitle">Digital Solutions That Break Boundaries</p>
+                                <p data-lang="section_P_cta-card_2" class="card-subtitle"></p>
 
-                                <h3 class="h2 card-title">Build, Market, and Expand Globally.</h3>
+                                <h3 data-lang="section_h3_cta-card_2" class="h2 card-title"></h3>
 
                                 <a href="pages/work.html" class="btn btn-link">
-                                    <span>Our Work</span>
+                                    <span data-lang="section_span_cta-card_2"></span>
 
                                     <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                                 </a>
@@ -281,108 +264,38 @@
             </section>
             <!-- BANNER SECTION  -->
 
+            <!-- STATS SECTION -->
+            <section class="stats-section">
+
+                <div class="stat-card">
+                    <div data-lang="stat-number-1" class="stat-number"></div>
+                    <div data-lang="stat-label-1" class="stat-label"></div>
+                </div>
+
+                <div class="stat-card">
+                    <div data-lang="stat-number-2" class="stat-number"></div>
+                    <div data-lang="stat-label-2" class="stat-label"></div>
+                </div>
+
+                <div class="stat-card">
+                    <div data-lang="stat-number-3" class="stat-number"></div>
+                    <div data-lang="stat-label-3" class="stat-label"></div>
+                </div>
+
+            </section>
+            <!-- STATS SECTION -->
+
             <!-- ABOUT SECTION -->
             <section class="about-section">
                 <section class="journey-section">
                     <div class="journey-container">
-                        <h1 class="journey-heading">
-                            Start the Growth Journey with Us! Request a free consultation about your logistical and
-                            technical needs.
+                        <h1 data-lang="section_h1_journey-heading" class="journey-heading">
                         </h1>
-                        <a href="#!" class="journey-btn">Start Journey</a>
+                        <a data-lang="section_a_journey-heading" href="#!" class="journey-btn"></a>
                     </div>
                 </section>
             </section>
             <!-- ABOUT SECTION -->
-
-
-            <!-- SERVICES SECTION -->
-            <section class="section service">
-                <div class="container">
-
-                    <ul class="service-list">
-
-                        <li class="service-item">
-                            <div class="service-card">
-
-                                <div class="card-icon">
-                                    <img src="img/service-1.png" width="53" height="28" loading="lazy"
-                                        alt="Service icon">
-                                </div>
-
-                                <div>
-                                    <h3 class="h4 card-title">Free Shiping</h3>
-
-                                    <p class="card-text">
-                                        All orders over
-                                    </p>
-                                </div>
-
-                            </div>
-                        </li>
-
-                        <li class="service-item">
-                            <div class="service-card">
-
-                                <div class="card-icon">
-                                    <img src="img/service-2.png" width="43" height="35" loading="lazy"
-                                        alt="Service icon">
-                                </div>
-
-                                <div>
-                                    <h3 class="h4 card-title">Quick Payment</h3>
-
-                                    <p class="card-text">
-                                        100% secure payment
-                                    </p>
-                                </div>
-
-                            </div>
-                        </li>
-
-                        <li class="service-item">
-                            <div class="service-card">
-
-                                <div class="card-icon">
-                                    <img src="img/service-3.png" width="40" height="40" loading="lazy"
-                                        alt="Service icon">
-                                </div>
-
-                                <div>
-                                    <h3 class="h4 card-title">Free Returns</h3>
-
-                                    <p class="card-text">
-                                        Money back in 30 days
-                                    </p>
-                                </div>
-
-                            </div>
-                        </li>
-
-                        <li class="service-item">
-                            <div class="service-card">
-
-                                <div class="card-icon">
-                                    <img src="img/service-4.png" width="40" height="40" loading="lazy"
-                                        alt="Service icon">
-                                </div>
-
-                                <div>
-                                    <h3 class="h4 card-title">24/7 Support</h3>
-
-                                    <p class="card-text">
-                                        Get Quick Support
-                                    </p>
-                                </div>
-
-                            </div>
-                        </li>
-
-                    </ul>
-
-                </div>
-            </section>
-            <!-- SERVICES SECTION -->
 
         </article>
     </main>

@@ -69,56 +69,58 @@
                 </button>
 
                 <a href="../index.html" class="logo">
-                    <img src="../img/logo.svg" width="190" height="50" alt="Global-Nexus logo">
+                    <img src="../img/logo.svg" width="190" height="50" alt="Global Nexus Company">
                 </a>
 
                 <ul class="navbar-list">
 
                     <li class="navbar-item">
-                        <a href='../index.html' class="navbar-link">Home</a>
+                        <a href='../index.html' data-lang="nav_home" class="navbar-link"></a>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="services.html" class="navbar-link">Services</a>
+                        <a href="services.html" data-lang="nav_services" class="navbar-link"></a>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="work.html" class="navbar-link">Our Work</a>
+                        <a href="work.html" data-lang="nav_ourwork" class="navbar-link"></a>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="products.html" class="navbar-link">Products</a>
+                        <a href="products.html" data-lang="nav_products" class="navbar-link"></a>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="about.html" class="navbar-link">About</a>
+                        <a href="about.html" data-lang="nav_about" class="navbar-link"></a>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="contact.html" class="navbar-link">Contact Us</a>
+                        <a href="contact.html" data-lang="nav_contact" class="navbar-link"></a>
                     </li>
 
                 </ul>
 
                 <ul class="nav-action-list">
 
-                    <li style="display: flex;">
-                        <button class="nav-action-btn">
-                            <ion-icon name="logo-facebook"></ion-icon>
+                    <div class="lang-dropdown">
+                        <button class="lang-btn" id="current-lang">
+                            <img src="../img/gb.png" alt="English Flag">
+                            English
+                            <span class="arrow">▼</span>
                         </button>
 
-                        <button class="nav-action-btn">
-                            <ion-icon name="logo-instagram"></ion-icon>
-                        </button>
-
-                        <button class="nav-action-btn">
-                            <ion-icon name="logo-whatsapp"></ion-icon>
-                        </button>
-
-                        <button class="nav-action-btn">
-                            <ion-icon name="logo-google"></ion-icon>
-                        </button>
-                    </li>
+                        <div class="lang-menu">
+                            <button onclick="changeLanguage('en', '../img/gb.png' ,'English')">
+                                <img src="../img/gb.png" alt="English Flag"> English
+                            </button>
+                            <button onclick="changeLanguage('ar',  '../img/eg.png' ,'العربية')">
+                                <img src="../img/eg.png" alt="Arabic Flag"> العربية
+                            </button>
+                            <button onclick="changeLanguage('it',  '../img/it.png' ,'Italiano')">
+                                <img src="../img/it.png" alt="Italian Flag"> Italiano
+                            </button>
+                        </div>
+                    </div>
 
                 </ul>
 
@@ -139,7 +141,7 @@
                         class="img-cover">
                 </figure>
 
-                <h2 class="h2 section-title">Global Produce. Digital Solutions.</h2>
+                <h2 data-lang="about-page_wrapper_h2" class="h2 section-title"></h2>
             </div>
 
             <figure class="about-banner about-banner-2 img-holder" style="--width: 500; --height: 700;">
@@ -149,15 +151,12 @@
 
             <div class="about-content">
 
-                <h3 class="h2 section-title">The Nexus of Produce and Tech.</h3>
+                <h3 data-lang="about-page_about-content_h3" class="h2 section-title"></h3>
 
-                <p class="section-text">
-                    Curabitur interdum malesuada lectus ut pharetra. Sed tellus ante, aliquet a sem id, ultricies varius
-                    dolor. Nam volutpat hendrerit massa. Crasposuere ornare elementum.
-                </p>
+                <p data-lang="about-page_about-content_p" class="section-text"></p>
 
                 <a href="/pages/services.html" class="btn">
-                    <span class="span">See More</span>
+                    <span data-lang="about-page_about-content_a" class="span"></span>
 
                     <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
                 </a>
@@ -186,13 +185,9 @@
         <div class="section feature-content">
             <div class="container">
 
-                <h2 class="h2 section-title">
-                    Smart Export. Digital Market.
-                </h2>
+                <h2 data-lang="about-page_feature_h2" class="h2 section-title"></h2>
 
-                <p class="section-text">
-                    Exporting Vegetables, Software Development, and E-Marketing.
-                </p>
+                <p data-lang="about-page_feature_p" class="section-text"></p>
 
                 <ul class="feature-list">
 
@@ -205,11 +200,9 @@
                             </div>
 
                             <div>
-                                <h3 class="h4 card-title">100% Guarantee</h3>
+                                <h3 data-lang="about-page_feature_list-card_h3_1" class="h4 card-title"></h3>
 
-                                <p class="card-text">
-                                    Guaranteed Global Produce Quality.
-                                </p>
+                                <p data-lang="about-page_feature_list-card_p_1" class="card-text"></p>
                             </div>
 
                         </div>
@@ -224,11 +217,9 @@
                             </div>
 
                             <div>
-                                <h3 class="h4 card-title">Professional Staffs</h3>
+                                <h3 data-lang="about-page_feature_list-card_h3_2" class="h4 card-title"></h3>
 
-                                <p class="card-text">
-                                    Innovative Software Solutions.
-                                </p>
+                                <p data-lang="about-page_feature_list-card_p_2" class="card-text"></p>
                             </div>
 
                         </div>
@@ -243,11 +234,9 @@
                             </div>
 
                             <div>
-                                <h3 class="h4 card-title">Affordable Price</h3>
+                                <h3 data-lang="about-page_feature_list-card_h3_3" class="h4 card-title"></h3>
 
-                                <p class="card-text">
-                                    Effective Digital Marketing Reach
-                                </p>
+                                <p data-lang="about-page_feature_list-card_p_3" class="card-text"></p>
                             </div>
 
                         </div>
@@ -255,11 +244,7 @@
 
                 </ul>
 
-                <p>
-                    We break down the barriers between physical products and the digital world. Global Nexus is your
-                    reliable partner in every step: from export planning and software development to achieving
-                    e-marketing success.
-                </p>
+                <p data-lang="about-page_feature_p_list"></p>
 
             </div>
         </div>
